@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class RevertirFrase {
+public class Ejercicios {
 
     public String revertir(String texto) {
 
@@ -36,4 +36,24 @@ public class RevertirFrase {
         }
          return resultado.toString();
     }
+
+     public String eliminarRepatidos(String textoEliminar) {
+        List<String> palabras = new ArrayList<>();
+
+        for (int i = 0; i < textoEliminar.length(); i++) {
+            char c = textoEliminar.charAt(i);
+
+            if(!palabras.contains(String.valueOf(c))) {
+                palabras.add(String.valueOf(c));
+            }
+        }
+
+        StringBuilder resultado = new StringBuilder();
+
+        for (String palabra : palabras) {
+            resultado.append(palabra);
+        }
+
+        return resultado.toString();
+     }
 }
